@@ -2,8 +2,11 @@ package sistematransporteturistico.clases;
 
 import java.util.Scanner;
 import java.time.Year;
+import java.util.Comparator;
 
-public abstract class Vehiculo {
+
+
+public abstract class Vehiculo implements Comparable<Vehiculo>{
     protected String patente;
     protected String marca;
     protected int capacidadPasajeros;
@@ -79,6 +82,23 @@ public abstract class Vehiculo {
                 "\nMarca: " + this.marca +
                 "\nCapacidad de pasajeros: " + this.capacidadPasajeros +
                 "\nAño de Facricacion: " + this.anioFabricacion;
+    }
+    
+    @Override
+        public int compareTo(Vehiculo otro) {
+        return this.patente.compareTo(otro.patente);
+}
+    
+    public int compareToPatente(String otraPatente){
+        return this.patente.compareTo(otraPatente);
+    }
+    
+    public int compareToAnio(Vehiculo otro) {
+        return Integer.compare(otro.anioFabricacion, this.anioFabricacion);
+    }
+    
+    public int compareToCapacidad(Vehiculo otro) {
+        return Integer.compare(otro.capacidadPasajeros, this.capacidadPasajeros);
     }
     
 }

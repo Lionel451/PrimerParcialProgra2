@@ -1,7 +1,5 @@
 package sistematransporteturistico.clases;
 
-import sistematransporteturistico.clases.Vehiculo;
-
 public class LanchaTuristica extends Vehiculo {
     private String tipoMotor;
     
@@ -31,6 +29,6 @@ public class LanchaTuristica extends Vehiculo {
     @Override
     public String toString(){
         return "Lancha Turistica ->" + super.toString() +
-                "Conbustible del motor: " + this.tipoMotor;
+                "\nConbustible del motor: " + this.tipoMotor;
     }
 }

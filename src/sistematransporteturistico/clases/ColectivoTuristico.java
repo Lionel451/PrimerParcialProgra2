@@ -1,7 +1,5 @@
 package sistematransporteturistico.clases;
 
-import sistematransporteturistico.clases.Vehiculo;
-
 public class ColectivoTuristico extends Vehiculo {
     private int cantidadPisos;
 
@@ -30,7 +28,7 @@ public class ColectivoTuristico extends Vehiculo {
     @Override
     public String toString(){
         return "Colectivo Turistico ->" + super.toString() +
-                "Pisos: " + this.cantidadPisos;
+                "\nPisos: " + this.cantidadPisos;
     }
     
     

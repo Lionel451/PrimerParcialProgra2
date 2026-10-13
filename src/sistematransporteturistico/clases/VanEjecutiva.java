@@ -1,7 +1,5 @@
 package sistematransporteturistico.clases;
 
-import sistematransporteturistico.clases.Vehiculo;
-
 public class VanEjecutiva extends Vehiculo {
     private boolean aireAcondicionado;
     
@@ -44,5 +42,6 @@ public class VanEjecutiva extends Vehiculo {
         return "Van Ejecutiva ->" + super.toString() +
                 "\naire acondicionado: " + aire;
     }
+
     
 }
