@@ -1,6 +1,6 @@
-package sistematransporteturistico;
+package sistematransporteturistico.clases;
 
-import sistematransporteturistico.Vehiculo;
+import sistematransporteturistico.clases.Vehiculo;
 
 public class VanEjecutiva extends Vehiculo {
     private boolean aireAcondicionado;
@@ -23,6 +23,26 @@ public class VanEjecutiva extends Vehiculo {
             System.out.println("No tiene aire acondicionado.");
         }
         
+    }
+
+    public void setAireAcondicionado(boolean aireAcondicionado) {
+        this.aireAcondicionado = aireAcondicionado;
+    }
+    
+    
+    
+    
+    @Override
+    public String toString(){
+        String aire;
+        
+        if(this.aireAcondicionado){
+            aire = "Si, tiene aire acondicionado";
+        } else {
+            aire = "No, no cuenta con aire acondicionado";
+        }
+        return "Van Ejecutiva ->" + super.toString() +
+                "\naire acondicionado: " + aire;
     }
     
 }

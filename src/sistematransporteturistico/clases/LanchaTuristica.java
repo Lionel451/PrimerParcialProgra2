@@ -1,6 +1,6 @@
-package sistematransporteturistico;
+package sistematransporteturistico.clases;
 
-import sistematransporteturistico.Vehiculo;
+import sistematransporteturistico.clases.Vehiculo;
 
 public class LanchaTuristica extends Vehiculo {
     private String tipoMotor;
@@ -18,5 +18,19 @@ public class LanchaTuristica extends Vehiculo {
                 + "\nCapacidad maxima de pasajeros: " + this.capacidadPasajeros
                 + "\nConbustible del motor: " + this.tipoMotor);
     }
+
+    public void setTipoMotor(String tipoMotor) {
+        String t = tipoMotor.trim().toUpperCase();
+        if (!t.equals("NAFTA") && !t.equals("DIESEL") && !t.equals("ELECTRICO")) {
+            throw new IllegalArgumentException("Tipo de motor inválido. Use NAFTA, DIESEL o ELECTRICO.");
+        }
+        this.tipoMotor = tipoMotor;
+    }
     
+    
+    @Override
+    public String toString(){
+        return "Lancha Turistica ->" + super.toString() +
+                "Conbustible del motor: " + this.tipoMotor;
+    }
 }
